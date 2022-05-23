@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <!--Bootstrap-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+        <!--Bootstrap-->
+
+        <!--FontAwesome-->
+        <script src="https://kit.fontawesome.com/3776d4d22d.js"></script>
+        <!--FontAwesome-->
+
+        <!-- development version, includes helpful console warnings -->
+        <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+
+        <!--Google Font-->
+        <link href="https://fonts.googleapis.com/css2?family=Koulen&family=Montserrat:wght@100;600&family=Open+Sans&display=swap" rel="stylesheet">
+        <!--Google Font-->
+         
+        <title>Todo list</title>
+    </head>
+    <body class="bg-white">
+
+        <!--intestazione della pagina-->
+        <header>
+          <nav class="navbar navbar-expand-lg navbar-light bg-primary">
+            <div class="container-md">
+              <a class="navbar-brand" href="#">Todo List</a>
+            </div>
+          </nav>
+        </header>
+        <!--intestazione della pagina-->
+
+        <!--corpo della pagina-->
+        <main>
+          <div id="app">
+            <div class="container m-5 d-flex">
+              <div class="container d-flex justify-content-center align-items-center mb-3">
+                <input type="text" v-model="newTodo">
+                <button class="btn btn-light mx-2" @click ="addTodo()">Aggiungi</button>
+              </div>
+              <div class="container bg-light p-5">
+                <ul>
+                  <li class="todo p-3" v-for="(todo,index) in todos">{{todo}}<i @click ="removeTodo(index)" class="mx-5 fa-solid fa-xmark"></i></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </main>
+        <!--corpo della pagina-->
+
+        <!--pie di pagina-->
+        <footer></footer>
+        <!--pie di pagina-->
+
+        <script src="main.js"></script>
+    </body>

@@ -1,0 +1,15 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'koulen';
+} 
+
+ul {
+    list-style-type: none;
+}
+
+li {
+    border-bottom: 1px solid lightgray;
+}
+
