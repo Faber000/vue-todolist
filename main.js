@@ -8,12 +8,12 @@ const app = new Vue ({
             },
             
             {
-                task: 'fare la spesa',
+                task: 'fare ginnastica',
                 isDone: false,
             },
 
             {
-                task: 'fare la spesa',
+                task: 'comprare le uova',
                 isDone: false,
             },
         ],
@@ -35,5 +35,9 @@ const app = new Vue ({
         removeTodo(index) {
            this.todos.splice(index, 1);
         },
+
+        changeStatus(index) {
+            this.todos[index].isDone = !this.todos[index].isDone;
+        }
     },
 });

@@ -26,29 +26,29 @@
 
         <!--intestazione della pagina-->
         <header>
-          <nav class="navbar navbar-expand-lg navbar-light bg-primary">
-            <div class="container-md">
-              <a class="navbar-brand" href="#">Todo List</a>
-            </div>
-          </nav>
+            <nav class="navbar navbar-expand-lg navbar-light bg-primary">
+                <div class="container-md">
+                    <a class="navbar-brand" href="#">Todo List</a>
+                </div>
+            </nav>
         </header>
         <!--intestazione della pagina-->
 
         <!--corpo della pagina-->
         <main>
-          <div id="app">
-            <div class="container m-5 d-flex">
-              <div class="container d-flex justify-content-center align-items-center mb-3">
-                <input type="text" v-model="newTodo">
-                <button class="btn btn-light mx-2" @click ="addTodo()">Aggiungi</button>
-              </div>
-              <div class="container bg-light p-5">
-                <ul>
-                  <li :class="todo.isDone ? 'done' : 'notDone'" class="p-3" v-for="(todo,index) in todos">{{todo.task}}<i @click ="removeTodo(index)" class="mx-5 fa-solid fa-xmark"></i></li>
-                </ul>
-              </div>
+            <div id="app">
+                <div class="container m-5 d-flex">
+                    <div class="container d-flex justify-content-center align-items-center mb-3">
+                        <input type="text" v-model="newTodo">
+                        <button class="btn btn-light mx-2" @click ="addTodo()">Aggiungi</button>
+                    </div>
+                    <div class="container bg-light p-5">
+                        <ul>
+                            <li @click= "changeStatus(index)" :class="todo.isDone ? 'done' : 'notDone'" class="p-3" v-for="(todo,index) in todos">{{todo.task}}<i @click ="removeTodo(index)" class="mx-5 fa-solid fa-xmark"></i></li>
+                        </ul>
+                    </div>
+                </div>
             </div>
-          </div>
         </main>
         <!--corpo della pagina-->
 
