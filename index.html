@@ -44,7 +44,7 @@
               </div>
               <div class="container bg-light p-5">
                 <ul>
-                  <li class="todo p-3" v-for="(todo,index) in todos">{{todo}}<i @click ="removeTodo(index)" class="mx-5 fa-solid fa-xmark"></i></li>
+                  <li :class="todo.isDone ? 'done' : 'notDone'" class="p-3" v-for="(todo,index) in todos">{{todo.task}}<i @click ="removeTodo(index)" class="mx-5 fa-solid fa-xmark"></i></li>
                 </ul>
               </div>
             </div>

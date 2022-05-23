@@ -2,11 +2,20 @@ const app = new Vue ({
     el: '#app',
     data: {
         todos: [
-            'fare la spesa',
+            {
+                task: 'fare la spesa',
+                isDone: true,
+            },
+            
+            {
+                task: 'fare la spesa',
+                isDone: false,
+            },
 
-            'fare ginnastica',
-
-            'fare i compiti',      
+            {
+                task: 'fare la spesa',
+                isDone: false,
+            },
         ],
 
        newTodo : '',
@@ -14,7 +23,11 @@ const app = new Vue ({
     methods: {
         addTodo() {
             if(this.newTodo !== ' ') {
-                this.todos.push(this.newTodo);
+                todo = {
+                    task: this.newTodo,
+                    isDone: false,
+                }
+                this.todos.push(todo);
                 this.newTodo = '';
             }
         },
