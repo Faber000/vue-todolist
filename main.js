@@ -22,7 +22,7 @@ const app = new Vue ({
     }, 
     methods: {
         addTodo() {
-            if(this.newTodo !== ' ') {
+            if(this.newTodo !== '') {
                 todo = {
                     task: this.newTodo,
                     isDone: false,
